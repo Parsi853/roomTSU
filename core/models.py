@@ -59,7 +59,7 @@ class room_review(models.Model):
 class room_image(models.Model):
     room = models.ForeignKey(room, on_delete=models.CASCADE, related_name="room_photo")
     img = models.ImageField(upload_to='rooms/')
-    catagory = models.CharField(max_length=16)
+    catagory = models.CharField(max_length=16, null=True, blank=True)
 
     def __str__(self) -> str:
         return self.room
