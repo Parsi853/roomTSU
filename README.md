@@ -1,7 +1,7 @@
 # roomTSU
 
 
-```pythoon manage.py runserver```
+```python manage.py runserver```
 
 ```Admin Panel ( http://localhost:8000/admin )```
 <br>
