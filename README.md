@@ -14,7 +14,7 @@ Step 4:
 <br>
 ```Open browser : http://127.0.0.1:8000/```
 <br>
-```Admin Panel ( http://localhost:8000/admin )```
+```Admin Panel : http://localhost:8000/admin```
 <br>
 Username : ayon
 <br>

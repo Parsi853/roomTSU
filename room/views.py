@@ -16,7 +16,7 @@ def newAddRoom(request):
             if form.is_valid():
 
                 new_room = room.objects.create(
-                    added_by = request.user,
+                    added_by = request.user.userprofile,
                     room_no = form.cleaned_data.get('room_no'),
                     floor = form.cleaned_data.get('floor'),
                     room_type = form.cleaned_data.get('room_type'),

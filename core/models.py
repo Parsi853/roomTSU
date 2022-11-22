@@ -5,7 +5,7 @@ import uuid
 
 class profile(models.Model):
     userid = models.UUIDField(default=uuid.uuid4, primary_key=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="userproffile")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="userprofile")
     full_name = models.CharField(max_length=40)
     phone_no = models.CharField(max_length=13)
     img = models.ImageField(upload_to='profiles/', default="x-avatar.png")
@@ -58,7 +58,7 @@ class room_review(models.Model):
 
 class room_image(models.Model):
     room = models.ForeignKey(room, on_delete=models.CASCADE, related_name="room_photo")
-    img = models.ImageField(upload_to='rooms/')
+    img = models.ImageField(upload_to='rooms/', null=True, blank=True)
     catagory = models.CharField(max_length=16, null=True, blank=True)
 
     def __str__(self) -> str:
